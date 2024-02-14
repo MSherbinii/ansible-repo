@@ -4,8 +4,8 @@
   tasks:
     - name: Copy updates folder to remote device
       ansible.builtin.copy:
-        src: "{{ playbook_dir }}/../updates/v1.0.1/"
-        dest: "/home/test"
+        src: "{{ src_update_path }}"
+        dest: "{{ dest_update_path }}"
         remote_src: no
         owner: remote_user
         group: remote_group
